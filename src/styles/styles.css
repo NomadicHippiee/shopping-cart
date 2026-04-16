@@ -1,10 +1,9 @@
 :root {
-    --color-primary: #dedede;
-    --color-secondary: #CED0D0;
-    --primary-text-color: #4A4A4A;
-    --secondary-text-color: #1A1A1A;
-    --color-text: #1A52A8;
-
+  --color-primary: #dedede;
+  --color-secondary: #ced0d0;
+  --primary-text-color: #4a4a4a;
+  --secondary-text-color: #1a1a1a;
+  --color-text: #1a52a8;
 }
 
 * {
@@ -19,7 +18,7 @@ body {
   font-size: 16px;
   padding: 25px 25px 0px 25px;
   background-color: var(--color-secondary);
-  color: var(--primary-text-color)
+  color: var(--primary-text-color);
 }
 
 header {
@@ -38,8 +37,16 @@ header {
 }
 
 h1 {
-    font-size: 2rem;
-    color: var(--secondary-text-color)
+  font-size: 2rem;
+  color: var(--secondary-text-color);
+}
+
+h2 {
+  color: var(--secondary-text-color);
+}
+
+strong {
+  color: var(--secondary-text-color);
 }
 
 nav {
@@ -55,19 +62,67 @@ nav ul {
 .nav-link {
   text-decoration: none;
   font-size: 1.5rem;
-  color: var(--primary-text-color)
+  color: var(--primary-text-color);
 }
 
 .nav-link:focus {
-    color: var(--color-text)
-
+  color: var(--color-text);
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 100px);
+  margin: 25px 100px;
 }
 
+.home {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  gap: 25px;
+}
 
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hero-text button {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--color-text);
+  color: var(--secondary-text-color);
+  font-size: 1.5rem;
+  margin: 15px auto;
+}
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+  max-width: 500px;
+  height: auto;
+  border-radius: 50%;
+  filter: grayscale(50%) brightness(1.2) contrast(1.1) hue-rotate(180deg);
+  object-fit: cover;
+}
+
+.home div {
+  flex: 1;
+}
+
+.home div h2 {
+  font-size: 2.5rem;
+}
+
+.home div p strong {
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+.home div p {
+  font-size: 1.5rem;
+}
