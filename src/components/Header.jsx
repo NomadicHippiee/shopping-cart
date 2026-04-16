@@ -8,10 +8,10 @@ export default function Header() {
             <h1>Fake Shop</h1>
             <nav>
                 <ul>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/shop">Shop</NavLink></li>
-                    <li><NavLink to="/cart">Cart</NavLink></li>
-                    <li><NavLink to="/contact">Contact</NavLink></li>
+                    <li><NavLink to="/" className="nav-link">Home</NavLink></li>
+                    <li><NavLink to="/shop" className="nav-link">Shop</NavLink></li>
+                    <li><NavLink to="/cart" className="nav-link">Cart</NavLink></li>
+                    <li><NavLink to="/contact" className="nav-link">Contact</NavLink></li>
 
                 </ul>
 
