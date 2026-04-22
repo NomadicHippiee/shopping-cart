@@ -22,5 +22,25 @@ function cartReducer(state, action) {
         return [...state, action.payload];
       }
       break;
+
+    case "REMOVE_FROM_CART":
+      return state.filter((item) => item.id !== action.payload);
+      break;
+
+    case "UPDATE_QUANTITY":
+      return state.map((item) => {
+        if (item.id === action.payload.productId) {
+          return { ...item, quantity: action.payload.newQuantity };
+        } else {
+          return item;
+        }
+      });
+      break;
+
+    case "LOAD_FROM_STORAGE":
+      return action.payload;
+      break;
+    default:
+      return state;
   }
 }
