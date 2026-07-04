@@ -33,24 +33,3 @@ npm run dev
 # Build for production
 npm run build
 
-src/
-  ├── api/
-  │   └── productService.js    (FakeStore API integration)
-  ├── context/
-  │   ├── CartContext.jsx      (Shopping cart state)
-  │   ├── useCart.js           (Cart hook)
-  │   ├── ProductsContext.jsx  (Products state)
-  │   └── useProducts.js       (Products hook)
-  ├── components/
-  │   ├── ProductCard.jsx      (Individual product display)
-  │   ├── CartItem.jsx         (Cart item with controls)
-  │   ├── OrderModal.jsx       (Fake order confirmation)
-  │   ├── Layout.jsx           (Header + routing)
-  │   └── Footer.jsx
-  ├── pages/
-  │   ├── Home.jsx             (Landing page)
-  │   ├── Shop.jsx             (Product listing)
-  │   ├── Cart.jsx             (Shopping cart)
-  │   └── Contact.jsx          (Contact info)
-  └── styles/
-      └── styles.css
