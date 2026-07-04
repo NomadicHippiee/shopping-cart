@@ -1,16 +1,56 @@
-# React + Vite
+🎭 Fake Shop - A React E-Commerce Learning Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comedic fake shopping cart application built with React, demonstrating core React concepts including routing, context management, and component composition.
 
-Currently, two official plugins are available:
+🧐 What is This?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Welcome to the **Fake Shop** — where nothing is real, but everything works! Add products to your cart, manage quantities, and complete your order... only to discover it will never be fulfilled. It's the perfect learning experience! 😂
 
-## React Compiler
+🎓 Project Lesson
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is part of **The Odin Project's React curriculum**.
 
-## Expanding the ESLint configuration
+👉 [Shopping Cart Lesson](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✨ Features
+
+- 🛍️ Live Product Catalog — Fetches products from [FakeStore API](https://fakestoreapi.com/)
+- 🛒 Shopping Cart — Add/remove items, adjust quantities, persists to localStorage
+- 📊 Real-time Cart Badge — Navbar shows item count that updates instantly
+- 💰 Order Receipt — Clean cart display with total calculation
+- 🎪 Fake Order Modal — Click "Complete Order" for a surprise!
+- ✅ PropTypes Validation — Type-safe component props
+
+🚀 Getting Started
+
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+src/
+  ├── api/
+  │   └── productService.js    (FakeStore API integration)
+  ├── context/
+  │   ├── CartContext.jsx      (Shopping cart state)
+  │   ├── useCart.js           (Cart hook)
+  │   ├── ProductsContext.jsx  (Products state)
+  │   └── useProducts.js       (Products hook)
+  ├── components/
+  │   ├── ProductCard.jsx      (Individual product display)
+  │   ├── CartItem.jsx         (Cart item with controls)
+  │   ├── OrderModal.jsx       (Fake order confirmation)
+  │   ├── Layout.jsx           (Header + routing)
+  │   └── Footer.jsx
+  ├── pages/
+  │   ├── Home.jsx             (Landing page)
+  │   ├── Shop.jsx             (Product listing)
+  │   ├── Cart.jsx             (Shopping cart)
+  │   └── Contact.jsx          (Contact info)
+  └── styles/
+      └── styles.css
