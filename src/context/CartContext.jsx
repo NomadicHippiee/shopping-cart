@@ -64,7 +64,7 @@ export function CartProvider( {children} ) {
     }, [state])
 
     return (
-        <CartContext.Provider value={{ state, dispatch}}>
+        <CartContext.Provider value={{ cart: state, dispatch}}>
             {children}
         </CartContext.Provider>
     )
