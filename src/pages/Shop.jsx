@@ -11,7 +11,7 @@ export default function Shop() {
     const handleAddToCart = (product, quantity) => {
         dispatch({
             type: 'ADD_TO_CART',
-            payload: { product, quantity }
+            payload: { ...product, quantity }
         });
     };
 
