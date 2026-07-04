@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export function CartItem({ item, onUpdateQuantity, onRemoveItem}) {
     const [quantity, setQuantity] = useState(item.quantity);
@@ -42,4 +43,16 @@ export function CartItem({ item, onUpdateQuantity, onRemoveItem}) {
             <button className="remove-btn" onClick={() => onRemoveItem(item.id)}>Remove</button>
         </div>
     )
-}
+};
+
+CartItem.propTypes = {
+    item: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        image: PropTypes.string.isRequired,
+        quantity: PropTypes.number.isRequired
+    }).isRequired,
+    onUpdateQuantity: PropTypes.func.isRequired,
+    onRemoveItem: PropTypes.func.isRequired
+};

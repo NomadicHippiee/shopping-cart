@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export function ProductCard({ product, onAddToCart }) {
   const [quantity, setQuantity] = useState(1);
@@ -37,4 +38,16 @@ export function ProductCard({ product, onAddToCart }) {
       <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to Cart</button>
     </div>
   );
+
+
 }
+  ProductCard.propTypes = {
+    product: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        image: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired
+    }).isRequired,
+    onAddToCart: PropTypes.func.isRequired
+  };

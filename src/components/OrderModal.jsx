@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export function OrderModal({isOpen, onClose}) {
     if (!isOpen) return null;
 
@@ -13,4 +15,9 @@ export function OrderModal({isOpen, onClose}) {
             </div>
         </div>
     );
+}
+
+OrderModal.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired
 }
