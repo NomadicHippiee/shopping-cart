@@ -173,11 +173,11 @@ grid-template-columns: repeat(3, 1fr);
 }
 
 .product-description {
-  flex: 1;  /* Takes up available space */
+  flex: 1;
 }
 
 .quantity-controls {
-  margin-top: auto;  /* ✅ Pushes this to the bottom */
+  margin-top: auto;
   display: flex;
   gap: 10px;
   align-items: center;
