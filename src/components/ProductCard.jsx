@@ -25,15 +25,15 @@ export function ProductCard({ product, onAddToCart }) {
       <div className="product-description">
         <div className="title-wrapper">
           <h2>{product.title}</h2>
-          <p>{product.price}</p>
+          <p>${product.price}</p>
         </div>
 
         <p>{product.description}</p>
       </div>
       <div className="quantity-controls">
-        <button onClick={decrementQuantity}>-</button>
+        <button className="quantity-btn" onClick={decrementQuantity}>-</button>
         <input type="number" min="1" value={quantity} onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value || 1)))} />
-        <button onClick={incrementQuantity}>+</button>
+        <button className="quantity-btn" onClick={incrementQuantity}>+</button>
       </div>
       <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to Cart</button>
     </div>
