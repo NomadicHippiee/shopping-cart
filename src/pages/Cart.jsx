@@ -37,10 +37,12 @@ export default function Cart() {
                 <CartItem key={item.id} item={item} onUpdateQuantity={handleUpdateQuantity} onRemoveItem={handleRemoveItem}/>
             ))}
         </div>
+        <div className="container">
         <div className="cart-total">
-            <h2>Total: ${totalPrice.toFixed(2)}</h2>
+            <h2><strong>Total:</strong> ${totalPrice.toFixed(2)}</h2>
         </div>
         <button className="complete-order-btn" onClick={() => setShowModal(true)}>Complete Order</button>
+        </div>
         <OrderModal isOpen={showModal} onClose={() => setShowModal(false)}/>
     </div>
   )

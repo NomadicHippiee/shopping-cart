@@ -271,6 +271,15 @@ main {
   gap: var(--15px);
 }
 
+.cart-page .container {
+  display: flex;
+  justify-content: space-around;
+  width: var(--500px);
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--secondary-text-color);
+}
+
 .cart-items {
   display: flex;
   flex-direction: column;
@@ -335,6 +344,16 @@ main {
   padding: 0 var(--15px);
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
+}
+
+.complete-order-btn {
+  padding: var(--10px) var(--20px);
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-text);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .contact {
