@@ -40,6 +40,11 @@ export function cartReducer(state, action) {
     case "LOAD_FROM_STORAGE":
       return action.payload;
       break;
+
+    case "CLEAR_CART":
+      return [];
+      break;
+      
     default:
       return state;
   }

@@ -43,7 +43,7 @@ export default function Cart() {
         </div>
         <button className="complete-order-btn" onClick={() => setShowModal(true)}>Complete Order</button>
         </div>
-        <OrderModal isOpen={showModal} onClose={() => setShowModal(false)}/>
+        <OrderModal isOpen={showModal} onClose={() => { setShowModal(false); dispatch({ type: "CLEAR_CART" }); }}/>
     </div>
   )
 }
